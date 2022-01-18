@@ -10,6 +10,14 @@ class ProductPage(BasePage):
         assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET_BUTTON), \
             "Add to cart button is not presented"
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_ADDED_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def should_dissappear(self):
+        assert self.is_disappeared(*ProductPageLocators.PRODUCT_ADDED_MESSAGE), \
+            "Success message should disappear, but it's still present"
+
     def should_be_succeed_message(self):
         assert self.is_element_present(*ProductPageLocators.PRODUCT_ADDED_MESSAGE), \
             "There is no message that product successfully added to basket"
