@@ -16,3 +16,8 @@ class ProductPageLocators():
     PRODUCT_NAME = (By.CSS_SELECTOR, '.col-sm-6.product_main h1')
     PRODUCT_NAME_FROM_BASKET = (By.CSS_SELECTOR, '.alert-success:first-child .alertinner strong')
 
+class BasketPageLocators():
+    BASKET_PAGE = (By.CSS_SELECTOR, '.btn-group .btn-default:first-child')
+    PRODUCTS_IN_BASKET = (By.CSS_SELECTOR, '.col-sm-6.h3')
+    EMPTY_BASKET_MESSAGE = (By.XPATH, '/html/body/div[2]/div/div[3]/div[2]/p')
+
